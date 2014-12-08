@@ -1,0 +1,36 @@
+Source: libxml-treepuller-perl
+Section: perl
+Priority: optional
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: matanya moses <matanya@foss.co.il>
+Build-Depends: debhelper (>= 8)
+Build-Depends-Indep: perl,
+ libxml-compacttree-perl,
+ libxml-libxml-perl,
+ libxml-sax-perl,
+ libxml-namespacesupport-perl,
+ libxml-sax-base-perl,
+ libtree-xpathengine-perl
+Standards-Version: 3.9.6
+Vcs-Git: git://git.debian.org/pkg-perl/packages/libxml-treepuller-perl.git
+Vcs-Browser:http://anonscm.debian.org/gitweb/?p=pkg-perl/packages/libxml-treepuller-perl.git
+Homepage: http://search.cpan.org/dist/XML-TreePuller/
+
+Package: libxml-treepuller-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends},
+ libxml-compacttree-perl,
+ libxml-libxml-perl,
+ libxml-sax-perl,
+ libxml-namespacesupport-perl,
+ libxml-sax-base-perl,
+ libtree-xpathengine-perl
+Description: module for pull interface to work with XML document fragments
+ XML::TreePuller module implements a tree oriented XML pull processor providing fast and
+ convenient unmarshalling of extremely large XML documents serially.
+ Unmarshalling means the module is intended to turn the XML document into
+ datastructures, not transform it. Tree oriented means the data is returned from
+ the engine as a tree of data replicating the structure of the original XML
+ document. Pull processor means you sequentially ask the engine for more data
+ (the opposite of SAX). This engine also supports breaking the document into
+ fragments so the trees are small enough to fit into RAM.
